@@ -1,17 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//Import the react & reactDOM libraries
+import React from "react";
+import ReactDOM from "react-dom";
+
+const helo = ()=>{
+    return "Hello jani button"
+}
+
+const newData = ()=>{
+    return (new Date().toLocaleTimeString()     ) 
+}
+
+//Create a React Component
+const App = ()=>{
+   
+    return (
+        <div>
+            <h1>Current Time</h1>
+            <h2>{newData()}</h2>
+        </div>
+        
+        
+        
+    //     <div>
+    //      <label>
+    //          Enter Name:
+    //      </label>
+    //      <input type="text" id="name"/>
+    //  <button style={{backgroundColor:"blue",color:"white"}}>{helo()}</button>
+    //  </div>
+    )
+}
+
+//Take react component & show it on screen
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+   <App/>,
+   document.querySelector("#root") 
+)
